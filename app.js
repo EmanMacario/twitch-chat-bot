@@ -1,5 +1,7 @@
 var tmi = require('tmi.js');
+var oauth = require('./oauth.js');
 
+/* Set options */
 var options = {
 	options: {
 		debug: true
@@ -10,7 +12,7 @@ var options = {
 	},
 	identity: {
 		username: "TotalWeebBot",
-		password: "oauth:phloq81nrvb6deuo8q4if7b0y8ix8g"
+		password: oauth.password
 	},
 	channels: ["prayingemantis"]
 };
@@ -30,6 +32,12 @@ client.on("chat", function(channel, user, message, self) {
 client.on("chat", function(channel, user, message, self) {
 	if (message === "!twitter") {
 		client.action("prayingemantis", "https://twitter.com/prayingemantis");
+	}
+});
+
+client.on("chat", function(channel, user, message, self) {
+	if (message === "!facebook") {
+		client.action("prayingemantis", "https://www.facebook.com/emmanuel.macario.75");
 	}
 });
 
