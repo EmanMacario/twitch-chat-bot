@@ -1,1 +1,0 @@
-exports.password = "oauth:oauth:phloq81nrvb6deuo8q4if7b0y8ix8g"
