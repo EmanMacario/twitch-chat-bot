@@ -22,6 +22,9 @@ var client = new tmi.client(options);
 client.connect();
 
 
+/* Change color of username */
+client.color("OrangeRed");
+
 /* Managing Events */
 client.on("chat", function(channel, user, message, self) {
 	if (message === "!weeb") {
